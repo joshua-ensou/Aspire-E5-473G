@@ -1,0 +1,23 @@
+[START STAGE BEFORE FU]
+
+#################################################################
+# Assign memory address 0xFF700000 into LPC generic memory range 
+# (PCH Bus0/Device31/Function0/Register98-9B)
+# and enable PC generic memory range (set bit 0)
+#################################################################
+
+PCIW : d 0x00 0x1F 0x00 0x98 0xFE800001
+
+[END STAGE BEFORE FU]
+
+[START STAGE AFTER FU]  
+
+#################################################################
+# Assign memory address 0x00000000 into LPC generic memory range 
+# (PCH Bus0/Device31/Function0/Register98-9B)
+# and disable LPC generic memory range (clear bit 0)
+#################################################################
+
+PCIW : d 0x00 0x1F 0x00 0x98 0x00000000
+
+[END STAGE AFTER FU] 

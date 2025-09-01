@@ -1,0 +1,93 @@
+Nuvoton Flash Update Tool - Version 4.1.7
+Command line: -bbl -vrd -novr -nocomp -noverify -noreboot -nopause -v -x W28AC101.bin -runbsf
+SCR: In SCR_ReadBSF() 
+SCR: In SCR_SetCommandsExecution() 
+SCR: In SCR_RunCommands() 
+SCR: In SCR_RunSingleCommand() 
+Looking for Nuvoton EC Device at address 164E
+Looking for Nuvoton EC Device at address 2E
+Looking for Nuvoton EC Device at address 4E
+SelectLogicalDevice(Device = SIO, LogicalDeviceNumber = 0Fh)
+Shared Memory Base Address: 0x1200
+getSHMMemoryInterface() returned LPC
+shmGetWindow2BaseAddress()
+Shared memory base address is fe800000
+Mapped FE800000 to FE800000 for WCB
+LDNEnable(Device = SIO, En = True)
+Using shared BIOS
+loadFlashProtectionWindows
+Flash Protection Windows are supported
+Protection Window 0: Base 0x3ffc00  Size 0x400000  Type 0xe0
+Protection Window 1: Base 0x3ffc00  Size 0x400000  Type 0xe0
+Protection Window 2: Base 0x3ffc00  Size 0x400000  Type 0xe0
+Protection Window 3: Base 0x3ffc00  Size 0x400000  Type 0xe0
+Protection Window 4: Base 0x3ffc00  Size 0x400000  Type 0xe0
+GetCorrectFlashConfiguration
+Trying configuration of flash ID: 11c2
+
+shmFlashInit(90,6,6,5,1,2,20,1,0,ff,8,0)
+Calling Pc2FlashWriteB
+Calling shmRunCommand
+shmFlashEnter
+shmFlashReadIDs
+shmFlashExit(exit_type = 0h)
+Found flash ID: 119d
+
+Trying configuration of flash ID: 43bf
+
+shmFlashInit(90,50,6,5,1,2,20,1,0,1,0,0)
+Calling Pc2FlashWriteB
+Calling shmRunCommand
+shmFlashEnter
+shmFlashReadIDs
+shmFlashExit(exit_type = 0h)
+Found flash ID: 119d
+
+Trying configuration of flash ID: 7f9d
+
+shmFlashInit(9f,6,6,5,1,2,d7,1,0,ff,8,0)
+Calling Pc2FlashWriteB
+Calling shmRunCommand
+shmFlashEnter
+shmFlashReadIDs
+shmFlashExit(exit_type = 0h)
+Found flash ID: 9d7f
+
+Trying configuration of flash ID: 119d
+
+shmFlashInit(90,6,6,5,1,2,d7,1,0,ff,8,0)
+Calling Pc2FlashWriteB
+Calling shmRunCommand
+shmFlashEnter
+shmFlashReadIDs
+shmFlashExit(exit_type = 0h)
+Found configuration for flash ID: 119d
+
+Mapped FFFC0000 to FFFC0000
+
+shmFlashInit(90,6,6,5,1,2,d7,1,0,ff,8,0)
+Calling Pc2FlashWriteB
+Calling shmRunCommand
+shmFlashEnter
+shmFlashReadIDs
+ m_flashUpdateOptions->NumOfBytesToDownload = 262144 l_noBlocks = 0, l_flashLastBlock = 4
+Block 0 do not contain sectors with protection type 3
+
+shmFlashInit(90,6,6,5,1,2,d8,1,0,ff,8,0)
+Calling Pc2FlashWriteB
+Calling shmRunCommand
+Erasing Block 0
+Progress: Address [0] E FlashSectorErase(Address = 0h)
+Progress: Address [0] |Block 1 do not contain sectors with protection type 3
+Erasing Block 1
+Progress: Address [10000] E FlashSectorErase(Address = 10000h)
+Progress: Address [10000] |Block 2 do not contain sectors with protection type 3
+Erasing Block 2
+Progress: Address [20000] E FlashSectorErase(Address = 20000h)
+Progress: Address [20000] |Block 3 do not contain sectors with protection type 3
+Erasing Block 3
+Progress: Address [30000] E FlashSectorErase(Address = 30000h)
+Progress: Address [30000] |shmFlashExit(exit_type = 2h)
+ERROR: Firmware did not set the RDY bit (semaphore = 0x1)
+SCR: In SCR_RunCommands() 
+SCR: In SCR_RunSingleCommand() 
